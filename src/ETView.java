@@ -180,12 +180,20 @@ public class ETView {
         frame.add(ceSP);
 
         digiExpenseTable.setFont(fontTable);
-        deSP = new JScrollPane(digiExpenseTable);
+        digiExpenseTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        digiExpenseTable.getColumnModel().getColumn(1).setPreferredWidth(90);
+        digiExpenseTable.getColumnModel().getColumn(5).setPreferredWidth(90);
+        deSP = new JScrollPane(digiExpenseTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+
         deSP.setBounds(42, 374, 499, 197);
         frame.add(deSP);
 
         budgetTable.setFont(fontTable);
-        bSP  = new JScrollPane(budgetTable);
+        budgetTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        budgetTable.getColumnModel().getColumn(2).setPreferredWidth(90);
+        budgetTable.getColumnModel().getColumn(3).setPreferredWidth(90);
+        budgetTable.getColumnModel().getColumn(4).setPreferredWidth(90);
+        bSP  = new JScrollPane(budgetTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         bSP.setBounds(605, 109, 394, 463);
         frame.add(bSP);
 
